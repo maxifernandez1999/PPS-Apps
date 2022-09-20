@@ -1,0 +1,20 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color:linear-gradient(to bottom, rgb(201, 32, 23) 0%, rgb(171, 66, 110) 54%, rgb(30, 11, 113) 68%, rgb(43, 158, 224) 100%);
+}
+
+.container-splash {
+    --background: none;
+    background: linear-gradient(to bottom, rgb(201, 32, 23)  0%, rgb(171, 66, 110) 54%, rgb(30, 11, 113) 68%, rgb(43, 158, 224) 100%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,158 @@
+.container-cosas-lindas {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(145, 145, 145);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    color: whitesmoke;
+    //padding-top: 5%;
+    //justify-content: center;
+}
+
+.header {
+    background: #1e1e1e;
+    color: whitesmoke;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.start {
+    width: 12%;
+    position: relative;
+    left: 2%;
+}
+
+.titulo {
+    position: relative;
+    //left: 50%;
+}
+
+
+.back {
+    font-size: 2em;
+    color: #fafafa;
+}
+
+.container-posteos {
+    overflow: scroll;
+    height: 69%;
+
+}
+
+.posteo {
+    max-height: 65%;
+}
+
+.subir-foto {
+    
+    width: 80%;
+    height: 5%;
+    border-radius: 10px;
+    background-color: rgb(60, 60, 240);
+    display: flex;
+    padding: 0.75% 0;
+    margin: 3% 0%;
+    transition: ease background 0.2s;
+    &:active {
+        background-color: rgb(36, 36, 138);
+    }
+}
+
+ion-toolbar {
+    text-align: right;
+}
+
+.icono-camara {
+    height: 100%;
+    width: 20%;
+    position: relative;
+    left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.camarita, .archivito {
+    font-size: 25px;
+    position: relative;
+    left: 2%;
+}
+
+.container-texto-subir {
+    width: 75%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.texto-subir {
+    font-size: 1em;
+}
+
+.foto-post {
+    padding: 2%;
+    //height: 75%;
+
+}
+
+.likes-post {
+    display: flex;
+    align-items: center;
+}
+
+.like {
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+.dislike {
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+.tabs {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 7.5%;
+    background: #1e1e1e;
+    color: whitesmoke;
+}
+
+.inicio, .perfil {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: ease all 0.2s;
+    &:active {
+        background-color: rgba(110, 214, 255, 0.712);
+    }
+}
+
+.container-inicio, .container-perfil {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-inicio, .icon-perfil {
+    font-size: 25px;
+}

@@ -1,0 +1,57 @@
+<div class="container-cosas-lindas">
+
+  <div class="header">
+    <ion-buttons class="start">
+      <ion-button (click)="backMain()">
+        <ion-icon name="arrow-back-circle-outline" class="back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="titulo">Cosas Lindas</ion-title>
+  </div>
+
+  <div class="subir-foto" (click)="takePhoto()">
+    <span class="icono-camara">
+      <ion-icon name="camera-outline" class="camarita"></ion-icon>
+    </span>
+    <div class="container-texto-subir">
+      <p class="texto-subir">Sacar Foto</p>
+    </div>
+  </div>
+
+  <div class="subir-foto" (click)="subirFoto()">
+    <span class="icono-camara">
+      <ion-icon name="document-outline" class="archivito"></ion-icon>
+    </span>
+    <div class="container-texto-subir">
+      <p class="texto-subir">Subir Foto</p>
+    </div>
+  </div>
+  <div class="container-posteos">
+    <ion-card class="posteo" *ngFor="let foto of this.urlOrdenado">
+      <img class="foto-post" src="{{foto.foto}}"  />
+      <ion-card-header>
+        <ion-card-subtitle class="datos-post">{{foto.usuario}} - {{foto.fecha}}</ion-card-subtitle>
+        <ion-card-subtitle class="likes-post"><span class="contador-likes"></span>
+          <ion-icon id="like" class="like" name="heart-outline" (click)="like(foto)" *ngIf="!buscarLike(foto.foto)"></ion-icon>
+          <ion-icon id="dislike" class="dislike" name="heart" (click)="dislike(foto)" *ngIf="buscarLike(foto.foto)"></ion-icon>
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <div class="tabs">
+    <div class="inicio">
+      <div class="container-inicio" (click)="toInicio()">
+        <ion-icon class="icon-inicio" name="newspaper-outline"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </div>
+    </div>
+
+    <div class="perfil">
+      <div class="container-perfil" (click)="toPerfil()">
+        <ion-icon class="icon-perfil" name="person-outline"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </div>
+    </div>
+  </div>
+</div>

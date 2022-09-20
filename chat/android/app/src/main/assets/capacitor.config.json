@@ -1,0 +1,9 @@
+{
+  "appId": "io.ionic.chat",
+  "appName": "Conversando en el Aula",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {},
+  "cordova": {}
+}

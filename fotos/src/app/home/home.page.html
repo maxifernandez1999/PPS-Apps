@@ -1,0 +1,56 @@
+<div class="container"></div>
+<ion-backdrop class="backdrop"></ion-backdrop>
+<ion-spinner name="bubbles" duration=500 class="spinner"></ion-spinner>
+<div class="container-titulo">
+  <h1 class="titulo">Edificios</h1>
+</div>
+
+
+<div class="container-form">
+  <ion-icon name="arrow-back-outline" size="large" class="back" (click)="Back()"></ion-icon>
+  <ion-icon name="person-sharp" size="large" class="users" (click)="Users()"></ion-icon>
+  <form (ngSubmit)="Login()">
+    <ion-item>
+
+      <ion-label position="floating">Correo electronico</ion-label>
+      <ion-input type="text" clear-input id="correo" maxlength="35" name="mail" [(ngModel)]='mail'></ion-input>
+    </ion-item>
+
+    <ion-item>
+
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" clear-input id="pass" maxlength="20" name="password" [(ngModel)]='password'
+        (keyup.enter)="Login()"></ion-input>
+    </ion-item>
+
+    <ion-button class="btn-login" id="loginButton" color="light" type="submit"
+      [disabled]="mail === '' || password.length < 4 ">Entrar</ion-button>
+
+  </form>
+</div>
+
+
+<div class="boton" (click)="Blur()">
+  <h1 class="entrar">Entrar</h1>
+</div>
+
+<div class="container-notificacion" id="container-notificacion">
+  <div class="icono-notificacion">
+    <ion-icon class="icono" name="alert-circle-outline" size="large"></ion-icon>
+  </div>
+  <div class="notificacion" id="notificacion"></div>
+</div>
+
+<div class="lista-usuarios" *ngIf="(mail == '' || password == '') && showUser; then select">
+
+
+</div>
+
+<ng-template #select>
+  <select (change)="completar()" id="select" class="lista-usuarios">
+    <option selected hidden>Seleccione un usuario</option>
+    <option *ngFor="let usuario of usuarios | async" [value]="usuario.correo">
+      {{usuario.correo}}
+    </option>
+  </select>
+</ng-template>

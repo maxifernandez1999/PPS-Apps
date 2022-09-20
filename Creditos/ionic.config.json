@@ -1,0 +1,8 @@
+{
+  "name": "Créditos",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
